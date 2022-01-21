@@ -13,7 +13,7 @@ M = 99          #中間層のノード数
 X = np.loadtxt("le4MNIST_X.txt")
 #X = mnist.download_and_parse_mnist_file("t10k-images-idx3-ubyte.gz")
 #Y = mnist.download_and_parse_mnist_file("t10k-labels-idx1-ubyte.gz")
-npz = np.load('np_savezA4.npz')
+npz = np.load('np_savezA42.npz')
 W1 = npz['zw1']
 b1 = npz['zb1']
 W2 = npz['zw2']
@@ -45,7 +45,7 @@ def pre_pro(): #前処理
 
 
 def input_layer(var): #入力層
-    x = np.ravel(X[var])
+    x = np.ravel(X[var]) / 255
     return x
 
 def mid_join(x): #中間層への入力を計算する層（全結合層)
