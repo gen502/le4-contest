@@ -24,7 +24,7 @@ def main():
         var = pre_pro()
         x = input_layer(var)
         t = mid_join(x)
-        y1 = relu(t)
+        y1 = sigmoid(t)
         a = out_join(y1)
         y2 = softmax(a)
         y = after_pro(y2)
